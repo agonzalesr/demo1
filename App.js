@@ -25,11 +25,12 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 
 import Inicio from "./screens/InicioScreen"
+import AppNavigator from "./navigation/AppNavigator"
 
 const App: () => React$Node = () => {
   return (
         <View style={{flex:1}}>
-          <Inicio />
+          <AppNavigator />
         </View>
     // <>
     //   <StatusBar barStyle="dark-content" />
