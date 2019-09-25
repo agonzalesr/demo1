@@ -24,7 +24,6 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
-import Inicio from "./screens/InicioScreen"
 import AppNavigator from "./navigation/AppNavigator"
 
 const App: () => React$Node = () => {
