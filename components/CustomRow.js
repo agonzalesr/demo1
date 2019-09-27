@@ -39,6 +39,8 @@ export default class CustomRow extends Component{
             alert.error(error);
         })}        
         
+        
+
     render(){
         return(
             <TouchableOpacity style={styles.containerRow} 
@@ -53,8 +55,10 @@ export default class CustomRow extends Component{
                 </Text>
             </View>
            
-          { this.state.display && 
-         <Modal animationType = "slide" >
+          
+         <Modal animationType = "slide"
+         visible={this.state.display}
+         onRequestClose = {()=>this.setState({display:false})}>
             <ScrollView style={styles.containerModal}>
                 <View style={styles.containerTitle}>
                     <Text style={styles.title}>Posts de {this.props.data.first_name} </Text>
@@ -75,7 +79,7 @@ export default class CustomRow extends Component{
                  <Button title="Cerrar" onPress={()=>this.setState({display:false}) }></Button>
             </ScrollView>
          </Modal>
-          }          
+         {/* { this.state.display &&  }           */}
         </TouchableOpacity>
         )
     }
